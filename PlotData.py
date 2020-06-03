@@ -5,7 +5,8 @@ import csv
 wb = openpyxl.load_workbook(
     r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\2020 Aaron Franson Test Plot.xlsx')
 sheet = wb['PLANTING FORM']
-csv = open(r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\2020 Aaron Franson Test Plot.csv', 'w')
+writeFile = open(
+    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\2020 Aaron Franson Test Plot.txt', 'w')
 
 
 def topInfo():
@@ -44,8 +45,8 @@ def topInfo():
     else:
         INSECTICIDE_RATE = "None"
 
-    csv.write(GROWER_NAME + "," + GROWER_CITY + "," + COUNTY + "," + ACE_LOCATION + "," + STATED_PLOT_ON + "," + FLAT_LOCATION + "," + str(GPS_LATITUDE) + "," + FUNGICIDE + "," + CROP + "," + str(PLANTING_DATE) + "," + str(SEEDING_RATE) + "," +
-              str(PLANTING_DEPTH_IN) + "," + PLANTER_TYPE + "," + str(ROW_WIDTH) + "," + str(GPS_LONGITUDE) + "," + HERBICIDE + "," + PLOT_TYPE + "," + IRRIGATION_TYPE + "," + PREVIOUS_CROP + "," + TILLAGE_SYSTEM + "," + SOIL_TEXTURE + "," + INSECTICIDE_RATE + ",")
+    writeFile.write(GROWER_NAME + "\t" + GROWER_CITY + "\t" + COUNTY + "\t" + ACE_LOCATION + "\t" + STATED_PLOT_ON + "\t" + FLAT_LOCATION + "\t" + str(GPS_LATITUDE) + "\t" + FUNGICIDE + "\t" + CROP + "\t" + str(PLANTING_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
+                    str(PLANTING_DEPTH_IN) + "\t" + PLANTER_TYPE + "\t" + str(ROW_WIDTH) + "\t" + str(GPS_LONGITUDE) + "\t" + HERBICIDE + "\t" + PLOT_TYPE + "\t" + IRRIGATION_TYPE + "\t" + PREVIOUS_CROP + "\t" + TILLAGE_SYSTEM + "\t" + SOIL_TEXTURE + "\t" + INSECTICIDE_RATE + "\t")
 
 
 def bottomInfo():
@@ -62,13 +63,11 @@ def bottomInfo():
 
         if COMPANY != None and HYBRID_VARIETY != None:
             topInfo()
-            csv.write(str(ENTRY) + "," + COMPANY + "," + str(HYBRID_VARIETY) +
-                      "," + SEED_TREATMENTS + "," + str(NUM_OF_ROWS) + "\n")
+            writeFile.write(str(ENTRY) + "\t" + COMPANY + "\t" + str(HYBRID_VARIETY) +
+                            "\t" + SEED_TREATMENTS + "\t" + str(NUM_OF_ROWS) + "\n")
         else:
             continue
 
 
-# topInfo()
 bottomInfo()
-csv.close()
-# bottomInfo()
+writeFile.close()
