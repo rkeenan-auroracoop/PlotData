@@ -8,7 +8,7 @@ writeFile = open(
     r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\2020 Aaron Franson Test Plot.txt', 'w')
 
 
-def topInfo():
+def topPlantingInfo():
     GROWER_NAME = sheet['C3'].value
     GROWER_CITY = sheet['C4'].value
     COUNTY = sheet['C5'].value
@@ -49,7 +49,7 @@ def topInfo():
                     str(PLANTING_DEPTH_IN) + "\t" + PLANTER_TYPE + "\t" + str(ROW_WIDTH) + "\t" + str(GPS_LONGITUDE) + "\t" + HERBICIDE + "\t" + PLOT_TYPE + "\t" + IRRIGATION_TYPE + "\t" + PREVIOUS_CROP + "\t" + TILLAGE_SYSTEM + "\t" + SOIL_TEXTURE + "\t" + INSECTICIDE_RATE + "\t" + FORM_TYPE + "\t")
 
 
-def bottomInfo():
+def bottomPlantingInfo():
     for row in range(17, sheet.max_row + 1):
         ENTRY = sheet['A' + str(row)].value
         COMPANY = sheet['C' + str(row)].value
@@ -62,12 +62,12 @@ def bottomInfo():
         NUM_OF_ROWS = sheet['M' + str(row)].value
 
         if COMPANY != None and HYBRID_VARIETY != None:
-            topInfo()
+            topPlantingInfo()
             writeFile.write(str(ENTRY) + "\t" + COMPANY + "\t" + str(HYBRID_VARIETY) +
                             "\t" + SEED_TREATMENTS + "\t" + str(NUM_OF_ROWS) + "\n")
         else:
             continue
 
 
-bottomInfo()
+bottomPlantingInfo()
 writeFile.close()
