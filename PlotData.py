@@ -68,6 +68,14 @@ def bottomPlantingInfo():
         else:
             continue
 
+# def topNotesInfo():
+
+# def bottomNotesInfo():
+
+# def topHarvestInfo():
+
+# def bottomHarvestInfo():
+
 
 bottomPlantingInfo()
 writeFile.close()
