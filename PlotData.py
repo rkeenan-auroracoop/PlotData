@@ -78,11 +78,11 @@ wb.close()
 
 # This is for the NOTES FORM
 
-wb = openpyxl.load_workbook(
-    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\2020 Aaron Franson Test Plot.xlsx')
-notesSheet = wb['NOTES FORM']
-notesWriteFile = open(
-    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(NOTES).txt', 'w')
+# wb = openpyxl.load_workbook(
+#    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\2020 Aaron Franson Test Plot.xlsx')
+# notesSheet = wb['NOTES FORM']
+# notesWriteFile = open(
+#    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(NOTES).txt', 'w')
 
 
 def topNotesInfo():
@@ -161,15 +161,15 @@ def bottomNotesInfo():
     print("Your Notes Form data plot file is done!")
 
 
-bottomNotesInfo()
-notesWriteFile.close()
+# bottomNotesInfo()
+# notesWriteFile.close()
 
 
 # This is for the HARVEST FORM
 
-harvestSheet = wb['HARVEST FORM']
-harvestWriteFile = open(
-    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(HARVEST).txt', 'w')
+# harvestSheet = wb['HARVEST FORM']
+# harvestWriteFile = open(
+#    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(HARVEST).txt', 'w')
 
 
 def topHarvestInfo():
@@ -275,5 +275,5 @@ def bottomHarvestInfo():
     print("Your Harvest Form data plot file is done!")
 
 
-bottomHarvestInfo()
-harvestWriteFile.close()
+# bottomHarvestInfo()
+# harvestWriteFile.close()
