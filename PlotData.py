@@ -1,12 +1,16 @@
-import openpyxl
+import os
 import pprint
+#import openpyxl
+from openpyxl import load_workbook
 
 # This is for the PLANTING FORM
 
-wb = openpyxl.load_workbook(
-    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\2020 Aaron Franson Test Plot.xlsx')
-plantingSheet = wb['PLANTING FORM']
-plantingWriteFile = open(
+# wb = openpyxl.load_workbook(
+#    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\2020 Aaron Franson Test Plot.xlsx')
+
+docDir = r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry'
+
+plantingWriteFile = (
     r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(PLANTING).txt', 'w')
 
 
@@ -15,8 +19,16 @@ def topPlantingInfo():
     GROWER_CITY = plantingSheet['C4'].value
     COUNTY = plantingSheet['C5'].value
     ACE_LOCATION = plantingSheet['C6'].value
+    if ACE_LOCATION != None:
+        ACE_LOCATION = ACE_LOCATION
+    else:
+        ACE_LOCATION = "None"
     STATED_PLOT_ON = plantingSheet['C7'].value
-    FLAT_LOCATION = plantingSheet['C8'].value
+    FLAG_LOCATION = plantingSheet['C8'].value
+    if FLAG_LOCATION != None:
+        FLAG_LOCATION = FLAG_LOCATION
+    else:
+        FLAG_LOCATION = "None"
     GPS_LATITUDE = plantingSheet['C9'].value
     FUNGICIDE = plantingSheet['C10'].value
     if FUNGICIDE != None:
@@ -27,8 +39,20 @@ def topPlantingInfo():
     PLANTING_DATE = plantingSheet['H4'].value
     SEEDING_RATE = plantingSheet['H5'].value
     PLANTING_DEPTH_IN = plantingSheet['H6'].value
+    if PLANTING_DEPTH_IN != None:
+        PLANTING_DEPTH_IN = PLANTING_DEPTH_IN
+    else:
+        PLANTING_DEPTH_IN = "None"
     PLANTER_TYPE = plantingSheet['H7'].value
+    if PLANTER_TYPE != None:
+        PLANTER_TYPE = PLANTER_TYPE
+    else:
+        PLANTER_TYPE = "None"
     ROW_WIDTH = plantingSheet['H8'].value
+    if ROW_WIDTH != None:
+        ROW_WIDTH = ROW_WIDTH
+    else:
+        SOIL_TEXTURE = "None"
     GPS_LONGITUDE = plantingSheet['H9'].value
     HERBICIDE = plantingSheet['H10'].value
     if HERBICIDE != None:
@@ -36,10 +60,30 @@ def topPlantingInfo():
     else:
         HERBICIDE = "None"
     PLOT_TYPE = plantingSheet['L5'].value
+    if PLOT_TYPE != None:
+        PLOT_TYPE = PLOT_TYPE
+    else:
+        PLOT_TYPE = "None"
     IRRIGATION_TYPE = plantingSheet['L6'].value
+    if IRRIGATION_TYPE != None:
+        IRRIGATION_TYPE = IRRIGATION_TYPE
+    else:
+        IRRIGATION_TYPE = "None"
     PREVIOUS_CROP = plantingSheet['L7'].value
+    if PREVIOUS_CROP != None:
+        PREVIOUS_CROP = PREVIOUS_CROP
+    else:
+        PREVIOUS_CROP = "None"
     TILLAGE_SYSTEM = plantingSheet['L8'].value
+    if TILLAGE_SYSTEM != None:
+        TILLAGE_SYSTEM = TILLAGE_SYSTEM
+    else:
+        TILLAGE_SYSTEM = "None"
     SOIL_TEXTURE = plantingSheet['L9'].value
+    if SOIL_TEXTURE != None:
+        SOIL_TEXTURE = SOIL_TEXTURE
+    else:
+        SOIL_TEXTURE = "None"
     INSECTICIDE_RATE = plantingSheet['L10'].value
     if INSECTICIDE_RATE != None:
         INSECTICIDE_RATE = INSECTICIDE_RATE
@@ -47,8 +91,8 @@ def topPlantingInfo():
         INSECTICIDE_RATE = "None"
     FORM_TYPE = "PLANTING FORM"
 
-    plantingWriteFile.write(GROWER_NAME + "\t" + GROWER_CITY + "\t" + COUNTY + "\t" + ACE_LOCATION + "\t" + STATED_PLOT_ON + "\t" + FLAT_LOCATION + "\t" + str(GPS_LATITUDE) + "\t" + FUNGICIDE + "\t" + CROP + "\t" + str(PLANTING_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
-                            str(PLANTING_DEPTH_IN) + "\t" + PLANTER_TYPE + "\t" + str(ROW_WIDTH) + "\t" + str(GPS_LONGITUDE) + "\t" + HERBICIDE + "\t" + PLOT_TYPE + "\t" + IRRIGATION_TYPE + "\t" + PREVIOUS_CROP + "\t" + TILLAGE_SYSTEM + "\t" + SOIL_TEXTURE + "\t" + INSECTICIDE_RATE + "\t" + FORM_TYPE + "\t")
+    f1.write(GROWER_NAME + "\t" + GROWER_CITY + "\t" + COUNTY + "\t" + ACE_LOCATION + "\t" + STATED_PLOT_ON + "\t" + FLAG_LOCATION + "\t" + str(GPS_LATITUDE) + "\t" + FUNGICIDE + "\t" + CROP + "\t" + str(PLANTING_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
+             str(PLANTING_DEPTH_IN) + "\t" + PLANTER_TYPE + "\t" + str(ROW_WIDTH) + "\t" + str(GPS_LONGITUDE) + "\t" + HERBICIDE + "\t" + PLOT_TYPE + "\t" + IRRIGATION_TYPE + "\t" + PREVIOUS_CROP + "\t" + TILLAGE_SYSTEM + "\t" + SOIL_TEXTURE + "\t" + INSECTICIDE_RATE + "\t" + FORM_TYPE + "\t")
 
 
 def bottomPlantingInfo():
@@ -65,16 +109,33 @@ def bottomPlantingInfo():
 
         if COMPANY != None and HYBRID_VARIETY != None:
             topPlantingInfo()
-            plantingWriteFile.write(str(ENTRY) + "\t" + COMPANY + "\t" + str(HYBRID_VARIETY) +
-                                    "\t" + SEED_TREATMENTS + "\t" + str(NUM_OF_ROWS) + "\n")
+            f1.write(str(ENTRY) + "\t" + COMPANY + "\t" + str(HYBRID_VARIETY) +
+                     "\t" + str(SEED_TREATMENTS) + "\t" + str(NUM_OF_ROWS) + "\n")
         else:
             continue
-    print("Your Planting Form data plot file is done!")
 
 
-bottomPlantingInfo()
-plantingWriteFile.close()
-wb.close()
+for folders, sub_folders, file in os.walk(docDir):
+    for name in file:
+        if name.endswith(".xlsx"):
+            filename = os.path.join(folders, name)
+            print(filename)
+            wb = load_workbook(filename)
+            plantingSheet = wb['PLANTING FORM']
+            with open(r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(PLANTING).txt', 'a') as f1:
+                bottomPlantingInfo()
+                wb.close()
+        else:
+            continue
+
+print("Your Planting Form data plot file is done!")
+
+# wb.close()
+
+
+# bottomPlantingInfo()
+# plantingWriteFile.close()
+# wb.close()
 
 # This is for the NOTES FORM
 
