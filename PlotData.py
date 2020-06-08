@@ -23,7 +23,7 @@ def topPlantingInfo():
         ACE_LOCATION = ACE_LOCATION
     else:
         ACE_LOCATION = "None"
-    STATED_PLOT_ON = plantingSheet['C7'].value
+    STARTED_PLOT_ON = plantingSheet['C7'].value
     FLAG_LOCATION = plantingSheet['C8'].value
     if FLAG_LOCATION != None:
         FLAG_LOCATION = FLAG_LOCATION
@@ -91,8 +91,8 @@ def topPlantingInfo():
         INSECTICIDE_RATE = "None"
     FORM_TYPE = "PLANTING FORM"
 
-    f1.write(GROWER_NAME + "\t" + GROWER_CITY + "\t" + COUNTY + "\t" + ACE_LOCATION + "\t" + STATED_PLOT_ON + "\t" + FLAG_LOCATION + "\t" + str(GPS_LATITUDE) + "\t" + FUNGICIDE + "\t" + CROP + "\t" + str(PLANTING_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
-             str(PLANTING_DEPTH_IN) + "\t" + PLANTER_TYPE + "\t" + str(ROW_WIDTH) + "\t" + str(GPS_LONGITUDE) + "\t" + HERBICIDE + "\t" + PLOT_TYPE + "\t" + IRRIGATION_TYPE + "\t" + PREVIOUS_CROP + "\t" + TILLAGE_SYSTEM + "\t" + SOIL_TEXTURE + "\t" + INSECTICIDE_RATE + "\t" + FORM_TYPE + "\t")
+    f1.write(GROWER_NAME.title() + "\t" + GROWER_CITY.title() + "\t" + COUNTY.title() + "\t" + ACE_LOCATION.title() + "\t" + STARTED_PLOT_ON.title() + "\t" + FLAG_LOCATION.title() + "\t" + str(GPS_LATITUDE) + "\t" + FUNGICIDE.title() + "\t" + CROP.title() + "\t" + str(PLANTING_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
+             str(PLANTING_DEPTH_IN) + "\t" + PLANTER_TYPE.title() + "\t" + str(ROW_WIDTH) + "\t" + str(GPS_LONGITUDE) + "\t" + HERBICIDE.title() + "\t" + PLOT_TYPE.title() + "\t" + IRRIGATION_TYPE.title() + "\t" + PREVIOUS_CROP.title() + "\t" + TILLAGE_SYSTEM.title() + "\t" + SOIL_TEXTURE.title() + "\t" + INSECTICIDE_RATE + "\t" + FORM_TYPE.title() + "\t")
 
 
 def bottomPlantingInfo():
@@ -109,7 +109,7 @@ def bottomPlantingInfo():
 
         if COMPANY != None and HYBRID_VARIETY != None:
             topPlantingInfo()
-            f1.write(str(ENTRY) + "\t" + COMPANY + "\t" + str(HYBRID_VARIETY) +
+            f1.write(str(ENTRY) + "\t" + COMPANY.title() + "\t" + str(HYBRID_VARIETY) +
                      "\t" + str(SEED_TREATMENTS) + "\t" + str(NUM_OF_ROWS) + "\n")
         else:
             continue
