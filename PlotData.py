@@ -13,7 +13,8 @@ docDir = r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau
 plantingWriteFile = (
     r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(PLANTING).txt', 'w')
 
-PV113_V89 = ['113-V89', '113-V89 VT2']
+PV113_V89 = ['113-V89', '113-V89 VT2', '113-V89 VT2P', '113-V89 VT2PRIB', '113-V89VT2', '113-V89VT2PRIB', '113V89 VT2', 'PV 113 V89 VT2', 'PV 113-V89',
+             'PV 113-V89 - VT2', 'PV 113-V89 VT2PRIB 32k', 'PV113 V89 VT2PRIB', 'PV113-V89', 'PV113-V89 VT2', 'PV113-V89 VT2RIB- Check', 'PV113-V89-VT2PRIB', 'PV113-V89VT2']
 
 
 def topPlantingInfo():
@@ -98,15 +99,19 @@ def topPlantingInfo():
 
 
 def bottomPlantingInfo():
+
     for row in range(17, plantingSheet.max_row + 1):
         ENTRY = plantingSheet['A' + str(row)].value
         COMPANY = plantingSheet['C' + str(row)].value
+        BASEITEMGUID = ''
         HYBRID_VARIETY = plantingSheet['F' + str(row)].value
-        if HYBRID_VARIETY == '113-V89':
-            #            or '113-V89 VT2' or '113-V89 VT2P' or '113-V89 VT2PRIB' or '113-V89VT2' or '113-V89VT2PRIB' or '113V89 VT2' or 'PV 113 V89 VT2' or 'PV 113-V89' or 'PV 113-V89 - VT2' or 'PV 113-V89 VT2PRIB 32k' or 'PV113 V89 VT2PRIB' or 'PV113-V89' or 'PV113-V89 VT2' or 'PV113-V89 VT2RIB- Check' or 'PV113-V89-VT2PRIB' or 'PV113-V89VT2':
-            HYBRID_VARIETY = 'PV 113-V89 VT2PRIB'
-        else:
-            HYBRID_VARIETY = HYBRID_VARIETY
+        for product in PV113_V89:
+            if HYBRID_VARIETY == product:
+                #            or '113-V89 VT2' or '113-V89 VT2P' or '113-V89 VT2PRIB' or '113-V89VT2' or '113-V89VT2PRIB' or '113V89 VT2' or 'PV 113 V89 VT2' or 'PV 113-V89' or 'PV 113-V89 - VT2' or 'PV 113-V89 VT2PRIB 32k' or 'PV113 V89 VT2PRIB' or 'PV113-V89' or 'PV113-V89 VT2' or 'PV113-V89 VT2RIB- Check' or 'PV113-V89-VT2PRIB' or 'PV113-V89VT2':
+                HYBRID_VARIETY = 'PV 113-V89 VT2PRIB'
+                BASEITEMGUID = '8F552B16-DB63-48B0-8C99-DB6E968B1E22'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
         SEED_TREATMENTS = plantingSheet['J' + str(row)].value
         if SEED_TREATMENTS != None:
             SEED_TREATMENTS = SEED_TREATMENTS
@@ -117,6 +122,7 @@ def bottomPlantingInfo():
         if COMPANY != None and HYBRID_VARIETY != None:
             topPlantingInfo()
             f1.write(str(ENTRY) + "\t" + COMPANY.title() + "\t" + str(HYBRID_VARIETY) +
+                     "\t" + str(BASEITEMGUID) +
                      "\t" + str(SEED_TREATMENTS) + "\t" + str(NUM_OF_ROWS) + "\n")
         else:
             continue
