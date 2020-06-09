@@ -16,6 +16,9 @@ plantingWriteFile = (
 PV113_V89 = ['113-V89', '113-V89 VT2', '113-V89 VT2P', '113-V89 VT2PRIB', '113-V89VT2', '113-V89VT2PRIB', '113V89 VT2', 'PV 113 V89 VT2', 'PV 113-V89',
              'PV 113-V89 - VT2', 'PV 113-V89 VT2PRIB 32k', 'PV113 V89 VT2PRIB', 'PV113-V89', 'PV113-V89 VT2', 'PV113-V89 VT2RIB- Check', 'PV113-V89-VT2PRIB', 'PV113-V89VT2']
 
+NK1082_5222A = ['1082 5222', '1082-5222', '1082-5222A',
+                'NK1082-5222A', 'NK1082-5222A Brand', 'NK1082-5222AEZ1']
+
 
 def topPlantingInfo():
     GROWER_NAME = plantingSheet['C3'].value
@@ -107,9 +110,14 @@ def bottomPlantingInfo():
         HYBRID_VARIETY = plantingSheet['F' + str(row)].value
         for product in PV113_V89:
             if HYBRID_VARIETY == product:
-                #            or '113-V89 VT2' or '113-V89 VT2P' or '113-V89 VT2PRIB' or '113-V89VT2' or '113-V89VT2PRIB' or '113V89 VT2' or 'PV 113 V89 VT2' or 'PV 113-V89' or 'PV 113-V89 - VT2' or 'PV 113-V89 VT2PRIB 32k' or 'PV113 V89 VT2PRIB' or 'PV113-V89' or 'PV113-V89 VT2' or 'PV113-V89 VT2RIB- Check' or 'PV113-V89-VT2PRIB' or 'PV113-V89VT2':
                 HYBRID_VARIETY = 'PV 113-V89 VT2PRIB'
                 BASEITEMGUID = '8F552B16-DB63-48B0-8C99-DB6E968B1E22'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK1082_5222A:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1082-5222A'
+                BASEITEMGUID = '047B6471-E671-434C-AF2D-1DE5657F2AEA'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
         SEED_TREATMENTS = plantingSheet['J' + str(row)].value
