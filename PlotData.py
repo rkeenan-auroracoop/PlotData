@@ -23,6 +23,9 @@ PV110_H20VT2PRIB = ['110-H20 VT2', '110-H20 VT2P', '110-H20 VT2PRIB', '110-H20VT
 PV112_Q70BT2PRIB = ['112-Q70', '112-Q70 VT2',
                     '112-Q70 VT2P', '112-Q70 VT2PRIB', '112-Q70VT2', 'PV 112- Q70', 'PV 112-Q70 - VT2', 'PV 112-Q70 VT2', 'PV112 Q70 VT2PRIB', 'PV112-Q70', 'PV112-Q70 VT2', 'PV112-Q70 VT2PRIB', 'PV112-Q70 VT2PRIB 36k', 'PV112-Q70TT2', 'PV112Q-70']
 
+PV112_T69SS = ['112-T69 SS', '112-T69 SSTX',
+               '112-T69 SSTX RIB', '112-T69 STX', '112-T69SSRIB', 'PV 112-T69 - VT2', 'PV112 T69 SSRIB', 'PV112-T69', 'PV112-T69 SS', 'PV112-T69 SSRIB', 'PV112-T69 SSRIB 36k']
+
 
 def topPlantingInfo():
     GROWER_NAME = plantingSheet['C3'].value
@@ -140,6 +143,12 @@ def bottomPlantingInfo():
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'PV 112-Q70 VT2PRIB'
                 BASEITEMGUID = '608CB2B2-9219-414A-8486-EFC9C2542C86'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in PV112_T69SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'PV 112-T69 SS RIB'
+                BASEITEMGUID = '993A89E8-E3F7-47AE-9908-FE7CAAF9D6F7'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
         SEED_TREATMENTS = plantingSheet['J' + str(row)].value
