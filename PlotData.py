@@ -13,6 +13,8 @@ docDir = r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau
 plantingWriteFile = (
     r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(PLANTING).txt', 'w')
 
+PV113_V89 = ['113-V89', '113-V89 VT2']
+
 
 def topPlantingInfo():
     GROWER_NAME = plantingSheet['C3'].value
@@ -100,6 +102,11 @@ def bottomPlantingInfo():
         ENTRY = plantingSheet['A' + str(row)].value
         COMPANY = plantingSheet['C' + str(row)].value
         HYBRID_VARIETY = plantingSheet['F' + str(row)].value
+        if HYBRID_VARIETY == '113-V89':
+            #            or '113-V89 VT2' or '113-V89 VT2P' or '113-V89 VT2PRIB' or '113-V89VT2' or '113-V89VT2PRIB' or '113V89 VT2' or 'PV 113 V89 VT2' or 'PV 113-V89' or 'PV 113-V89 - VT2' or 'PV 113-V89 VT2PRIB 32k' or 'PV113 V89 VT2PRIB' or 'PV113-V89' or 'PV113-V89 VT2' or 'PV113-V89 VT2RIB- Check' or 'PV113-V89-VT2PRIB' or 'PV113-V89VT2':
+            HYBRID_VARIETY = 'PV 113-V89 VT2PRIB'
+        else:
+            HYBRID_VARIETY = HYBRID_VARIETY
         SEED_TREATMENTS = plantingSheet['J' + str(row)].value
         if SEED_TREATMENTS != None:
             SEED_TREATMENTS = SEED_TREATMENTS
@@ -130,6 +137,14 @@ for folders, sub_folders, file in os.walk(docDir):
 
 print("Your Planting Form data plot file is done!")
 
+# with open(r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(PLANTING).txt', 'a+') as f1:
+#    for line in f1:
+#        if '113-V89' in line:
+#            line.replace('113-V89', 'PV 113-V89 VT2PRIB')
+#        else:
+#            continue
+
+#print("Product names are now updated.")
 # wb.close()
 
 
