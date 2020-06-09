@@ -5,9 +5,6 @@ from openpyxl import load_workbook
 
 # This is for the PLANTING FORM
 
-# wb = openpyxl.load_workbook(
-#    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\2020 Aaron Franson Test Plot.xlsx')
-
 docDir = r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry'
 
 plantingWriteFile = (
@@ -16,8 +13,13 @@ plantingWriteFile = (
 PV113_V89 = ['113-V89', '113-V89 VT2', '113-V89 VT2P', '113-V89 VT2PRIB', '113-V89VT2', '113-V89VT2PRIB', '113V89 VT2', 'PV 113 V89 VT2', 'PV 113-V89',
              'PV 113-V89 - VT2', 'PV 113-V89 VT2PRIB 32k', 'PV113 V89 VT2PRIB', 'PV113-V89', 'PV113-V89 VT2', 'PV113-V89 VT2RIB- Check', 'PV113-V89-VT2PRIB', 'PV113-V89VT2']
 
-NK1082_5222A = ['1082 5222', '1082-5222', '1082-5222A',
+NK1082_5222A = ['1082 5222', '1082-5222', '1082-5222A', '1082A 5222',
                 'NK1082-5222A', 'NK1082-5222A Brand', 'NK1082-5222AEZ1']
+
+PV110_H20SS = ['110-H20 SS']
+
+PV110_H20VT2PRIB = ['110-H20 VT2', '110-H20 VT2P', '110-H20 VT2PRIB', '110-H20VT2', '110-H20VT2PRIB', 'PV110 H20 VT2PRIB',
+                    'PV110-H20 VT2', 'PV110-H20 VT2PRIB', 'PV110-H20 VT2PRIB 34k', 'PV110-H20 VT2RIB', 'PV110-H20VT2', ]
 
 
 def topPlantingInfo():
@@ -118,6 +120,18 @@ def bottomPlantingInfo():
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'NK 1082-5222A'
                 BASEITEMGUID = '047B6471-E671-434C-AF2D-1DE5657F2AEA'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in PV110_H20SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'PV 110-H20 SS'
+                BASEITEMGUID = '22E1DB5A-F533-4CE2-BF66-153706205D5F'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in PV110_H20VT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'PV 110-H20 VT2PRIB'
+                BASEITEMGUID = '00B96AF0-0394-436A-A385-978A1C21BD89'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
         SEED_TREATMENTS = plantingSheet['J' + str(row)].value
