@@ -16,10 +16,10 @@ PV_113_V89 = ['113-V89', '113-V89 VT2', '113-V89 VT2P', '113-V89 VT2PRIB', '113-
 NK_1082_5222A = ['1082 5222', '1082-5222', '1082-5222A', '1082A 5222',
                  'NK1082-5222A', 'NK1082-5222A Brand', 'NK1082-5222AEZ1']
 
-PV_110_H20SS = ['110-H20 SS']
+PV_110_H20SS = ['110-H20 SS', '110-H2O STX']
 
 PV_110_H20VT2PRIB = ['110-H20 VT2', '110-H20 VT2P', '110-H20 VT2PRIB', '110-H20VT2', '110-H20VT2PRIB', 'PV110 H20 VT2PRIB',
-                     'PV110-H20 VT2', 'PV110-H20 VT2PRIB', 'PV110-H20 VT2PRIB 34k', 'PV110-H20 VT2RIB', 'PV110-H20VT2', 'PV110 H2O VT2PRIB']
+                     'PV110-H20 VT2', 'PV110-H20 VT2PRIB', 'PV110-H20 VT2PRIB 34k', 'PV110-H20 VT2RIB', 'PV110-H20VT2', 'PV110 H2O VT2PRIB', 'PV110-H20-VT2PRIB', 'PV110H20-VT2']
 PV_112_Q70BT2PRIB = ['112-Q70', '112-Q70 VT2',
                      '112-Q70 VT2P', '112-Q70 VT2PRIB', '112-Q70VT2', 'PV 112- Q70', 'PV 112-Q70 - VT2', 'PV 112-Q70 VT2', 'PV112 Q70 VT2PRIB', 'PV112-Q70', 'PV112-Q70 VT2', 'PV112-Q70 VT2PRIB', 'PV112-Q70 VT2PRIB 36k', 'PV112-Q70TT2', 'PV112Q-70']
 
@@ -28,15 +28,52 @@ PV_112_T69SS = ['112-T69 SS', '112-T69 SSTX',
 PV_113_B40 = ['113-B40 DGVT2', '113-B40 DGVT2PRIB',
               '113-B40 VT2', '113-B40 VT2P', '113-B40DGVT2', 'PV113 B40 DGVT2PRIB', 'PV113-B40', 'PV113-B40 DGVT2PRIB', 'PV113-B40 VT2', 'PV113-B40DGVT2']
 PV_115_D59 = ['115-D59 VT2', '115-D59 VT2P', '115-D59 VT2P', '115-D59VT2PRIB', '115D59',
-              '115D59 VT2', 'PV 115-D59 - VT2', 'PV 115-D59 VT2', 'PV 115-D59 VT2PRIB 34k', 'PV 115-D59VT2', 'PV115 D59 VT2PRIB', 'PV115-D59', 'PV115-D59 VT2', 'PV115-D59 VT2PRIB', 'PV115-D59 VT2RIB', 'PV115-D59TV2']
+              '115D59 VT2', 'PV 115-D59 - VT2', 'PV 115-D59 VT2', 'PV 115-D59 VT2PRIB 34k', 'PV 115-D59VT2', 'PV115 D59 VT2PRIB', 'PV115-D59', 'PV115-D59 VT2', 'PV115-D59 VT2PRIB', 'PV115-D59 VT2RIB', 'PV115-D59TV2', 'PV115-D59VT2']
 PV_115_M60 = ['115-M60 TRE RIB', '115-M60 TRERIB', '115-M60 Tr', '115-M60TRE RIB', '115-M60TRERIB', '115-R60 Tre', '115M60', '115M60 VT2',
               'PV 115-M60 TRECEPTA 34k', 'PV115 M60 TRERIB', 'PV115-M60', 'PV115-M60 TRE', 'PV115-M60 TRERIB', 'PV115-M60 TreceptraRIB', 'PV115-M60VT2', 'PV115M60 TRERIB']
 PV_114_R50_VT2PRIB = ['114-R50 VT2', '114-R50 VT2P',
-                      '114-R50VT2PRIB', '114R50 VT2', 'PV 114 R50 VT2', 'PV 114-R50 VT2PRIB 32k', 'PV114 R50 VT2PRIB', 'PV114-R50 VT2', 'PV114-R50 VT2PRIB', 'PV114-R50-VT2RIB', 'PV114-R50VT2', 'PV114R50VT2']
+                      '114-R50VT2PRIB', '114R50 VT2', 'PV 114 R50 VT2', 'PV 114-R50 VT2PRIB 32k', 'PV114 R50 VT2PRIB', 'PV114-R50 VT2', 'PV114-R50 VT2PRIB', 'PV114-R50-VT2RIB', 'PV114-R50VT2', 'PV114R50VT2', 'PV114-R50-VT2PRIB', 'PV114-R50-VT2']
 PV_114_R50_SS = ['114-R50 SS', '114-R50 STX',
                  'PV 114 R50SS', 'PV 114-R50 -SSX']
 PV_109_P29_VT2PRIB = ['109-P29 VT2', '109-P29VT2PRIB', 'PV 109-P29 - VT2', 'PV109-P29',
                       'PV109-P29 VT2', 'PV109-P29 VT2PRIB', 'PV109-P29 VT2PRIB 34k', 'PV109-P29 Vt2P', 'PV109-P29VT2', ]
+PV_109_A90_VT2PRIB = ['109-A90', '109-A90 VT2', '109-A90 VT2P',
+                      '109-A90 VT2PRIB', '109-A90VT2', '109-A90VT2PRIB', 'PV 109-A90 VT2', 'PV109-A90', 'PV109-A90VT2', 'PV 109-A90 VT2PRIB']
+PV_3519X = ['3519X']
+LG_5643_VT2P = ['LG5643 VT2', '5643 VT2',
+                '5643VT2', '5643VT2RIB', 'LG5643 VT2', 'LG5643 VT2PRIB', 'LG5643 VT2PRIB']
+LG_5643_STX = ['5643 STX', 'LG5643STX', '5643SS-RIB']
+LG_5700_VT2P = ['LG5700VT2', '5700 VT2', '5700 VT2RIB',
+                '5700VT2', 'LG5700 VT2', 'LG5700VT2', 'LG5700 VT2PRIB', 'LG5700 VT2PRIB']
+LG_5700_STX = ['5700 STX', 'LG5700STX']
+LG_5525 = ['LG5525']
+LG_61C48_VT2P = ['LG61C48VT2P', 'LG61C48 VT2']
+LG_62C35_VT2P = ['62C35 NT2', '62C35 VT2', '62C35VT2', '62C35VT2RIB',
+                 'LG62C35', 'LG62C35 VT2', 'LG62C35VT2', 'LG62C35VT2P']
+LG_64C30_TRC = ['LG64C30TRC', '64C30 VIP',
+                '64C30 TRE', '64C30 VT2', '64C30TRC']
+LG_59C66_VTP2 = ['59C66 VT2', 'LG59C66 VT2']
+LG_59C41_STX = ['59C41 STX']
+LG_66C32_STX = ['LG66C32STX', '66C32 STX',
+                '66C32SSTX', 'LG66C32 STX', 'LG66C32STX']
+LG_66C32_VT2P = ['66C32 VT2']
+LG_66C28_3110 = ['66C28 - 3110', '66C28-3110', '66C28 3220', '66C28 VIP']
+LG_67C45_STX = ['LG 67C45 STX RIB', '67C45 SS-RIB', '67C45STX', '67C45 STX']
+LG_60C33_VT2P = ['LG60C33 VT2', '60C33 VT2']
+LG_5650_VT2PRIB = ['LG5650 VT2PRIB']
+LG_5606_STX = ['5606 STX']
+LG_55C95_VT2P = ['55C95 VT2']
+LG_58C77_VT2P = ['58C77 3220']
+LG_59C72_VT2P = ['59C72 VT2']
+LG_68C88_VT2P = ['68C88 VT2']
+LG_C2888RX = ['2888RX']
+LG_S2989RX = ['2989RX']
+LG_S3060RX = ['3060RX']
+LG_C3550RX = ['3550RX']
+LG_S3600RX = ['3600RX']
+LG_59C46 = ['59C46']
+LG_64C30_TRC = ['64C30 TRE', '64C30TRC', 'LG64C30TRC',
+                'LG6430 TRCIB', '64C30 VIP', '64C30 VT2']
 
 
 def topPlantingInfo():
@@ -199,6 +236,187 @@ def bottomPlantingInfo():
                 BASEITEMGUID = '94C559B2-C262-43B0-BDA3-E98F7EAC76CE'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
+        for product in PV_109_A90_VT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'PV 109-A90 VT2PRIB'
+                BASEITEMGUID = '3788CA80-FFEE-4898-9052-DFED4D0A1F3B'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in PV_3519X:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'PV 3519X'
+                BASEITEMGUID = 'C88D2F86-62D5-476F-AE33-0D6603127C7B'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_5643_VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 5643 VT2P RIB'
+                BASEITEMGUID = 'BD58062A-D5BC-4C71-9EB9-BABF52E8B384'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_5643_STX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 5643 STX RIB'
+                BASEITEMGUID = 'D524D3CE-82B8-4492-80AE-07663301546D'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_5700_VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 5700 VT2P RIB'
+                BASEITEMGUID = '7B649F45-2512-474A-89FB-5D123DF4E1B6'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_5700_STX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 5700 STX RIB'
+                BASEITEMGUID = '4F6A0CAE-A6E7-4847-8361-D880BF29DE1C'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_5525:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 5525'
+                BASEITEMGUID = '78AE89F4-83D0-49FD-B890-2A0AD3849B5E'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_61C48_VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 61C48 VT2P RIB'
+                BASEITEMGUID = 'BE770144-C9C3-4EB7-85FD-3C3CC4A92532'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_62C35_VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 62C35 VT2P RIB'
+                BASEITEMGUID = '597DE6C5-8C4A-4A3A-B89B-27BB5BAFAB96'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_64C30_TRC:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 64C30 TRC RIB'
+                BASEITEMGUID = 'E4172F9A-F63B-448A-929D-5ADF65115C40'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_59C66_VTP2:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 59C66 VT2P RIB'
+                BASEITEMGUID = '6531D4F6-9965-4A44-88E7-0E506A7DC5FC'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_59C41_STX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 59C41 STX RIB'
+                BASEITEMGUID = 'C76FE046-C980-48D3-BBD0-F8E84FE51D68'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_66C32_STX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 66C32 STX RIB'
+                BASEITEMGUID = 'F58A604D-0215-40B0-8ABD-6A2BA3D12F05'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_66C32_VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 66C32 VT2P RIB'
+                BASEITEMGUID = 'D6CF601F-89C8-4663-A155-AA52903ED565'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_66C28_3110:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 66C28 3110'
+                BASEITEMGUID = 'BBF34E36-114B-4C4C-8B5F-CB661D44A704'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_67C45_STX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 67C45 STX RIB'
+                BASEITEMGUID = 'DA404D4C-0325-46D9-8E6E-32262E50CB17'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_60C33_VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 60C33 VT2P RIB'
+                BASEITEMGUID = '59767244-D7E8-4887-B141-B07F5A87269A'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_5650_VT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 5650 VT2P RIB'
+                BASEITEMGUID = '5873E176-BC43-4B29-A144-7CC73F779996'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_5606_STX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 5606 STX RIB'
+                BASEITEMGUID = '9A73674F-E03D-4D07-970C-AC70FE0F4EB7'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_55C95_VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 55C95 VT2P'
+                BASEITEMGUID = '89226E37-7A3B-46B1-B817-29D110347AA6'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_58C77_VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 58C77 VT2P RIB'
+                BASEITEMGUID = 'A27CC89D-7177-41DC-AB41-FB77AE7E77F9'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_59C72_VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 59C72 VT2P RIB'
+                BASEITEMGUID = '951D5426-254E-4582-B652-0D43F5E8D93D'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_68C88_VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 68C88 VT2P RIB'
+                BASEITEMGUID = '29E7DE18-AC94-4ACF-89F5-A79F35974A77'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_C2888RX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG C2888RX'
+                BASEITEMGUID = 'DBD6A924-13B6-4EEA-B30F-62D7CFD76924'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_S2989RX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG S2989RX'
+                BASEITEMGUID = '65C6770F-EA57-403E-BDF6-8FDA37746E6D'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_S3060RX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG S3060RX'
+                BASEITEMGUID = '5A2A26F5-0BD1-4778-91F9-4FF646B0AD6E'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_C3550RX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG C3550RX'
+                BASEITEMGUID = '19A4C5B6-E434-4DD3-99BF-7DA444457779'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_S3600RX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG S3600RX'
+                BASEITEMGUID = '0CC3D44A-E050-4336-B0D7-E83328067EA5'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_59C46:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 59C46 Conv'
+                BASEITEMGUID = '4DE8DBBC-FD1D-46AE-A27F-97CDC7FA1084'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LG_64C30_TRC:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LG 64C30 TRC RIB'
+                BASEITEMGUID = 'E4172F9A-F63B-448A-929D-5ADF65115C40'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+
         SEED_TREATMENTS = plantingSheet['J' + str(row)].value
         if SEED_TREATMENTS != None:
             SEED_TREATMENTS = SEED_TREATMENTS
