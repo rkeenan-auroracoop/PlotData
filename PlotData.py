@@ -14,7 +14,7 @@ PV_113_V89 = ['113-V89', '113-V89 VT2', '113-V89 VT2P', '113-V89 VT2PRIB', '113-
               'PV 113-V89 - VT2', 'PV 113-V89 VT2PRIB 32k', 'PV113 V89 VT2PRIB', 'PV113-V89', 'PV113-V89 VT2', 'PV113-V89 VT2RIB- Check', 'PV113-V89-VT2PRIB', 'PV113-V89VT2']
 
 NK_1082_5222A = ['1082 5222', '1082-5222', '1082-5222A', '1082A 5222',
-                 'NK1082-5222A', 'NK1082-5222A Brand', 'NK1082-5222AEZ1']
+                 'NK1082-5222A', 'NK1082-5222A Brand', 'NK1082-5222AEZ1', 'NK1082 5222A', 'NK1082 5222']
 
 PV_110_H20SS = ['110-H20 SS', '110-H2O STX']
 
@@ -49,7 +49,7 @@ LG_5700_STX = ['5700 STX', 'LG5700STX']
 LG_5525 = ['LG5525']
 LG_61C48_VT2P = ['LG61C48VT2P', 'LG61C48 VT2']
 LG_62C35_VT2P = ['62C35 NT2', '62C35 VT2', '62C35VT2', '62C35VT2RIB',
-                 'LG62C35', 'LG62C35 VT2', 'LG62C35VT2', 'LG62C35VT2P']
+                 'LG62C35', 'LG62C35 VT2', 'LG62C35VT2', 'LG62C35VT2P', '62C34']
 LG_64C30_TRC = ['LG64C30TRC', '64C30 VIP',
                 '64C30 TRE', '64C30 VT2', '64C30TRC']
 LG_59C66_VTP2 = ['59C66 VT2', 'LG59C66 VT2']
@@ -101,6 +101,33 @@ MYCO_289E = ['289-E3', '289E', 'MY289E']
 MYCO_2580Q = ['2580AM', '2580 AM']
 MYCO_2290AM = ['2290 AM']
 MYCO_MY300E = ['300-E3', 'MY300E']
+NK_1239_5122 = ['NK 1239-5122', 'NK1239', 'NK1239-5122',
+                'NK1239-5122 Brand', 'NK1239-5122-EZ1', '1239 5122', '1239-5122', 'NK1239 5122A', 'NK1239 5122']
+NK_1460_5222 = ['1460 5222', 'NK 1460-5222', 'NK1460', 'NK1460-5222',
+                'NK1460-5222 Brand', 'NK1460-5222-EZ1', 'NKNX11406-5222', '1460-5222', 'NK1460 5222A', '1406-5222', '1460-5222', 'NK1460 5222']
+NK_1354_5222 = ['NK1354-5222', 'NK1354-5222-EZ1',
+                '1354-5222', 'NK1354-5222', 'NK1354-5222-EZ1']
+NK_1573_5222 = ['1573 -5222', '1573-5222',
+                'NK 1573-5222', 'NK1573-5222-EZ1', 'NK1573 5222']
+NK_1523_3220 = ['NK1523-3220-EZ1', '1523 - 1523',
+                '1523 3220', 'NK 1523-3220', 'NK1523', 'NK1523-3220', '1523 5222', 'NK1523 3220A', '1523-3220', 'NK1523 3220']
+NK_1694_3111 = ['1694 3111', '1694-3111']
+NK_1188_5122 = ['NK 1188-5122', 'NK1188-5122', 'NK1188-5122 Brand',
+                '1188 5122', '1188-5122', '1188-5122A', '1188-5222']
+NK_0821_5122A = ['NK0821-5122A', '0821 5122']
+NK_1354_3220 = ['1354 3220']
+NK_S30_E3 = ['NK S30-E3', 'S30 E3', '30-E3']
+NK_S31_E3 = ['NK S31-E3S', 'S31 E3', '31-E3']
+NK_S35_E3 = ['NK S35-E3', 'S35 E3', '35-E3', 'S35 E3 ']
+NK_S28_E3 = ['S28 E3', 'S28-E3', '28-E3']
+NK_1026_3330 = ['1026 3330']
+NK_S30_M9X = ['30-M9X']
+NK_S35_K9X = ['35-K9X']
+NK_S37_A4X = ['37-A4X']
+NK_S39_G2X = ['39-G2X']
+NK_S39_E3 = ['39-E3']
+NK_1460_3110 = ['1460-3220']
+NK_S33_E3 = ['S33 E3']
 
 
 def topPlantingInfo():
@@ -597,6 +624,144 @@ def bottomPlantingInfo():
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'MYCO MY300E'
                 BASEITEMGUID = 'B5FA8E9B-826B-4D26-94A8-2C21DFCCF4E1'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1239_5122:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1239-5122'
+                BASEITEMGUID = '03A74077-2633-42BE-A9C4-3CA0D78596BC'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1460_5222:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1460-5222'
+                BASEITEMGUID = '9C7009A2-79CD-4714-B911-B5C33162FB46'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1354_5222:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1354-5222'
+                BASEITEMGUID = '04A1AA99-E0D9-487C-8715-773ACE0648CE'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1573_5222:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1573-5222'
+                BASEITEMGUID = '8FC0EE4D-93F0-4872-8C75-DCC046A06814'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1523_3220:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1523-3220'
+                BASEITEMGUID = '73DB5840-C88D-4224-9D42-F794BC2EB2D2'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1694_3111:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1694-3111'
+                BASEITEMGUID = '4083695E-4933-4094-8A8C-E6C8C55A4566'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1188_5122:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1188-5122'
+                BASEITEMGUID = 'C6F0C46C-4790-4CDD-AD7A-2FC63227B5D2'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_0821_5122A:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 0821-5122A'
+                BASEITEMGUID = 'B1CBC295-C776-40B1-82A0-9D51DD90249B'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1354_3220:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1354-3220'
+                BASEITEMGUID = 'E8894FBD-839E-48E5-8767-31F60492F001'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1354_5222:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1354-5222'
+                BASEITEMGUID = '04A1AA99-E0D9-487C-8715-773ACE0648CE'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S30_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S30-E3'
+                BASEITEMGUID = 'D3B77EF8-E919-4683-8EBE-19DA3BD470A0'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S31_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S31-E3'
+                BASEITEMGUID = '21F488C0-2A38-4441-BCFB-26CBEBA3BF4D'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S35_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S35-E3'
+                BASEITEMGUID = '9807A85B-1173-43DF-BC5D-E858B983F6AB'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S28_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S28-E3'
+                BASEITEMGUID = 'B9159B82-7555-4827-AE2C-968BEEFAA74C'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1026_3330:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1026-3330'
+                BASEITEMGUID = 'A52D0A6B-06BA-4126-B7B1-1826FA16DEF0'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S30_M9X:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S30-M9X'
+                BASEITEMGUID = 'AA5423AF-34AB-43F6-A9F9-9BD6605683C5'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S35_K9X:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S35-K9X'
+                BASEITEMGUID = 'D92C4427-1A19-46F2-8300-D7CEAD948182'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S37_A4X:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S37-A4X'
+                BASEITEMGUID = 'F900A269-5246-4C61-AF04-B9AE58A422F6'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S39_G2X:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S39-G2X'
+                BASEITEMGUID = 'E9D5C4DF-56F9-4BEE-B00E-EB69C9A08D3B'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S30_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S30-E3'
+                BASEITEMGUID = 'D3B77EF8-E919-4683-8EBE-19DA3BD470A0'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S39_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S39-E3'
+                BASEITEMGUID = '63209980-20D4-4335-846D-91F32EAC7D48'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_1460_3110:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK 1460-3110'
+                BASEITEMGUID = 'CC53ED31-5170-44EB-B514-853E2AE9127F'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NK_S33_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NK S33-E3'
+                BASEITEMGUID = 'B0A2CE6E-4441-4F25-9EE6-79986BFBBD06'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
 
