@@ -128,6 +128,38 @@ NK_S39_G2X = ['39-G2X']
 NK_S39_E3 = ['39-E3']
 NK_1460_3110 = ['1460-3220']
 NK_S33_E3 = ['S33 E3']
+P_1108Q = ['1108', '1108 Q', '1108 Qrome', '1108Q', 'P1108Q', 'P1108Q']
+P_1082AM = ['1082 AM', '1082AM', 'P1082AM']
+P_1082Q = ['1082 Q', '1082Q']
+P_1089AM = ['1089 AMXT', 'P1089AM']
+P_1093Q = ['1093 Q', 'P1093Q']
+P_1185AM = ['P1185', 'P1185 AM', 'P1185AM', 'P1185AM - CHECK', '1185 AM']
+P_1185Q = ['P1185Q', '1185Q']
+P_1244Q = ['1244 Qrome', '1244', '1244Q']
+P_1353AM = ['1359 AM', '1359AM', 'P1353AM']
+P_1353Q = ['P1353Q', '1353Q', '1353 Q']
+P_1359AM = ['1359 AM', 'P1359', 'P1359AM']
+P_1366Q = ['1366 Q', '1366 Qrome', '1366Q', 'P1366Q']
+P_1366AM = ['P1366 - AM']
+P_1366AML = ['1366AML', 'P1366AML']
+P_1370Q = ['P1370Q']
+P_1415Q = ['P1415Q']
+P_1548AM = ['P1548AM']
+P_1563AM = ['1563AM', 'P1563AM']
+P_1563AML = ['P1563AML']
+P_1572AM = ['P1572AM']
+P_1716Q = ['1716Q', 'P1716', 'P1716Q']
+P_1828Q = ['1828Q']
+P_1828AM = ['P1828AM']
+P_1847AML = ['P1847AML']
+P_2042AML = ['2042AML', 'P2042AML']
+P_2042AM = ['P2042AM']
+P_32T26E = ['P32T26 E', 'P32T26E']
+P_0622Q = ['P0622Q', 'PO622Q']
+P_0339AM = ['PO339AM', 'P0339AM']
+P_0343AML = ['P0343AML', 'PO343AML']
+P_0446Q = ['P0446Q', 'PO446Q']
+P_0595AM = ['P0595AM', 'PO595AM']
 
 
 def topPlantingInfo():
@@ -762,6 +794,198 @@ def bottomPlantingInfo():
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'NK S33-E3'
                 BASEITEMGUID = 'B0A2CE6E-4441-4F25-9EE6-79986BFBBD06'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1108Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1108Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1082AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1082AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1082Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1082Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1089AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1089AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1093Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1093Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1185AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1185AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1185Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1185Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1244Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1244Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1353Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1353Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1353AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1353AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1359AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1359AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1366Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1366Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1366AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1366AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1366AML:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1366AML'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1563AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1563AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1563AML:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1563AML'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1716Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1716Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1828Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1828Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1828AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1828AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_2042AML:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P2042AML'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1370Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1370Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1415Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1415Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1548AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1548AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1572AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1572AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_1847AML:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P1847AML'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_2042AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P2042AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_0339AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P0339AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_32T26E:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P32T26E'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_0622Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P0622Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_0343AML:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P0343AML'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_0446Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P0446Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in P_0595AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'P0595AM'
+                BASEITEMGUID = '14'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
 
