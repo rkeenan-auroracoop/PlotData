@@ -1,6 +1,6 @@
 import os
 import pprint
-#import openpyxl
+# import openpyxl
 from openpyxl import load_workbook
 
 # This is for the PLANTING FORM
@@ -74,6 +74,17 @@ LG_S3600RX = ['3600RX']
 LG_59C46 = ['59C46']
 LG_64C30_TRC = ['64C30 TRE', '64C30TRC', 'LG64C30TRC',
                 'LG6430 TRCIB', '64C30 VIP', '64C30 VT2']
+MYCO_2410Q = ['2410 Q', '2410Q']
+MYCO_2410AM = ['2410 AML', '2410 AM', '2410-AM',
+               '2410AM', 'MY2410AM', 'MYCO 2410 AM']
+MYCO_1610Q = ['1610', '1610 SS']
+MYCO_1201Q = ['1201 Q', '1201 Qrome', '1201Q', 'MY1201Q']
+MYCO_2470AM = ['MY2470AM']
+MYCO_2470AML = ['2470 AML', '2470AML', 'MY2470AML', 'MYCO 2470 AML']
+MYCO_2470Q = ['2470Q']
+MYCO_MY1404AM = ['MY1404AM', 'MY1404 AM']
+MYCO_1404AM = ['1404AM', '1404 AM']
+MYCO_1830AML = []
 
 
 def topPlantingInfo():
@@ -416,6 +427,66 @@ def bottomPlantingInfo():
                 BASEITEMGUID = 'E4172F9A-F63B-448A-929D-5ADF65115C40'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2410Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 2410Q'
+                BASEITEMGUID = '15DCB22C-4426-4611-9118-270AD62B6799'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2410AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 2410AM'
+                BASEITEMGUID = '2E351241-17AC-4B98-BD1F-FA105E10B803'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_1610Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 1610Q'
+                BASEITEMGUID = '878B3D71-D1D4-43C6-A1AA-F2CA6B22C7FF'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_1201Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 1201Q'
+                BASEITEMGUID = '804D4E61-1A96-47CB-9559-F298FC4D7E2C'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2470AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 2470AM'
+                BASEITEMGUID = '4EB2A823-A071-4A7E-97AF-76F269730B9B'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2470AML:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 2470AML'
+                BASEITEMGUID = 'ADDFC5AB-B968-4B57-8240-D8A4AFFEA2EA'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2470Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 2470Q'
+                BASEITEMGUID = '39671E4E-80D4-4CB6-B9B9-D16A0DBE542F'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_MY1404AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO MY1404AM'
+                BASEITEMGUID = 'B5B2A4AA-1B53-447F-A93F-5E79B1275DA6'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_1404AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 1404AM'
+                BASEITEMGUID = '378F6F09-0882-41C6-9AC7-78B6D662CB89'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_1830AML:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 1830AML'
+                BASEITEMGUID = '5EB16F04-6313-4EBC-8DD0-1E715E48D7CB'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
 
         SEED_TREATMENTS = plantingSheet['J' + str(row)].value
         if SEED_TREATMENTS != None:
@@ -455,7 +526,7 @@ print("Your Planting Form data plot file is done!")
 #        else:
 #            continue
 
-#print("Product names are now updated.")
+# print("Product names are now updated.")
 # wb.close()
 
 
@@ -558,7 +629,6 @@ def bottomNotesInfo():
 # harvestWriteFile = open(
 #    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(HARVEST).txt', 'w')
 
-
 def topHarvestInfo():
     GROWER_NAME = harvestSheet['C3'].value
     GROWER_CITY = harvestSheet['C4'].value
@@ -660,7 +730,6 @@ def bottomHarvestInfo():
             continue
 
     print("Your Harvest Form data plot file is done!")
-
 
 # bottomHarvestInfo()
 # harvestWriteFile.close()
