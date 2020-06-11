@@ -84,7 +84,23 @@ MYCO_2470AML = ['2470 AML', '2470AML', 'MY2470AML', 'MYCO 2470 AML']
 MYCO_2470Q = ['2470Q']
 MYCO_MY1404AM = ['MY1404AM', 'MY1404 AM']
 MYCO_1404AM = ['1404AM', '1404 AM']
-MYCO_1830AML = []
+MYCO_1830AML = ['MYCO 1830 AML' '1830', '1830 AML', '1830-AML', '1830AML']
+MYCO_2030Q = ['2030 -Q', '2030Q', 'MYCO 2030Q']
+MYCO_1890Q = ['1890 Q', '1890Q']
+MYCO_1101Q = ['MY1101 CYFR', 'MY1101Q', '1101 Q', '1101Q']
+MYCO_2630AM = ['2630 AM', '2630AM', 'MYCO 2630 AM']
+MYCO_2630Q = ['2630 Q', '2630Q', '2360Q']
+MYCO_12G35RA = ['MY12G35', '12G35']
+MYCO_MY319E = ['MY319E']
+MYCO_MY320L4 = ['MY320E', '320-E3']
+MYCO_MY340E = ['340E', 'MY340E']
+MYCO_MY350L4 = ['MY350E']
+MYCO_5N360R2 = ['MY360E']
+MYCO_2358AM = ['2358 AM', '2358AM']
+MYCO_289E = ['289-E3', '289E', 'MY289E']
+MYCO_2580Q = ['2580AM', '2580 AM']
+MYCO_2290AM = ['2290 AM']
+MYCO_MY300E = ['300-E3', 'MY300E']
 
 
 def topPlantingInfo():
@@ -485,6 +501,102 @@ def bottomPlantingInfo():
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'MYCO 1830AML'
                 BASEITEMGUID = '5EB16F04-6313-4EBC-8DD0-1E715E48D7CB'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2030Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 2030Q'
+                BASEITEMGUID = 'CA3E6FF7-63BD-47F2-A01C-7F8A17963116'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_1890Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 1890Q'
+                BASEITEMGUID = 'F92DEE0D-766E-43E6-857F-FC54A36A672B'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_1101Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 1101Q'
+                BASEITEMGUID = '15B2DBCF-00E2-436D-B7CA-877105A94CBA'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2630AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 2630AM'
+                BASEITEMGUID = 'E9DE374A-4223-4621-B9C5-9400ED913BC0'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2630Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 2630Q'
+                BASEITEMGUID = '275AF472-7DE7-4A19-97ED-D96B76922F12'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_12G35RA:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO MY12G35RA'
+                BASEITEMGUID = 'DC3F238E-BC2D-41BD-9217-50352D9FE394'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_MY319E:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO MY319E'
+                BASEITEMGUID = '9CCFFC8B-565B-4FA2-9E17-91B4637C4F23'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_MY320L4:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO MY320L4'
+                BASEITEMGUID = 'D6B213A6-D3E6-436B-A990-0778B4D00DA7'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_MY340E:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO MY340E'
+                BASEITEMGUID = '774F5B7F-3D52-4E78-9D57-25F6508C36F2'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_MY350L4:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO MY350L4'
+                BASEITEMGUID = 'C0AAAF8D-E35A-4CF3-A447-2A4627DD6943'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_5N360R2:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 5N360R2'
+                BASEITEMGUID = '6159F0DE-4874-47EE-9144-B24542563193'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2358AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 2358AM'
+                BASEITEMGUID = 'B0D4C565-FF36-476C-A715-3E02B53732EA'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_289E:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO MY289E'
+                BASEITEMGUID = '283CBA00-C109-4903-8C1C-8E0E02A9EEEE'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2580Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = '2580AM'
+                BASEITEMGUID = '67489DDD-1B6A-4A16-B79F-9C910F1E3D7D'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_2290AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO 2290AM'
+                BASEITEMGUID = 'AF7FE0F9-B0B9-4D09-9A1C-8406AB4680E2'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in MYCO_MY300E:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'MYCO MY300E'
+                BASEITEMGUID = 'B5FA8E9B-826B-4D26-94A8-2C21DFCCF4E1'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
 
