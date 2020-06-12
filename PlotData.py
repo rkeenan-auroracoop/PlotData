@@ -220,6 +220,10 @@ def topPlantingInfo():
     else:
         ACE_LOCATION = "None"
     STARTED_PLOT_ON = plantingSheet['C7'].value
+    if STARTED_PLOT_ON != None:
+        STARTED_PLOT_ON = STARTED_PLOT_ON
+    else:
+        STARTED_PLOT_ON = 'None'
     FLAG_LOCATION = plantingSheet['C8'].value
     if FLAG_LOCATION != None:
         FLAG_LOCATION = FLAG_LOCATION
