@@ -80,11 +80,13 @@ MYCO_2410AM = ['2410 AML', '2410 AM', '2410-AM',
 MYCO_1610Q = ['1610', '1610 SS']
 MYCO_1201Q = ['1201 Q', '1201 Qrome', '1201Q', 'MY1201Q']
 MYCO_2470AM = ['MY2470AM']
-MYCO_2470AML = ['2470 AML', '2470AML', 'MY2470AML', 'MYCO 2470 AML']
+MYCO_2470AML = ['2470 AML', '2470AML',
+                'MY2470AML', 'MYCO 2470 AML', 'MYCO2470AML', '2470-AML']
 MYCO_2470Q = ['2470Q']
 MYCO_MY1404AM = ['MY1404AM', 'MY1404 AM']
 MYCO_1404AM = ['1404AM', '1404 AM']
-MYCO_1830AML = ['MYCO 1830 AML' '1830', '1830 AML', '1830-AML', '1830AML']
+MYCO_1830AML = ['MYCO 1830 AML' '1830', '1830 AML',
+                '1830-AML', '1830AML', 'MYCO1830AML']
 MYCO_2030Q = ['2030 -Q', '2030Q', 'MYCO 2030Q']
 MYCO_1890Q = ['1890 Q', '1890Q']
 MYCO_1101Q = ['MY1101 CYFR', 'MY1101Q', '1101 Q', '1101Q']
@@ -160,6 +162,10 @@ P_0339AM = ['PO339AM', 'P0339AM']
 P_0343AML = ['P0343AML', 'PO343AML']
 P_0446Q = ['P0446Q', 'PO446Q']
 P_0595AM = ['P0595AM', 'PO595AM']
+AC_3219_E3 = ['A3219E3']
+AC_3619_E3 = ['A3619E3', '3619-E3']
+AC_3719_E3 = ['A3719E3']
+AC_2919_E3 = ['2919-E3', 'A2919E3']
 
 
 def topPlantingInfo():
@@ -986,6 +992,30 @@ def bottomPlantingInfo():
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'P0595AM'
                 BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AC_3219_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A3219 E-3'
+                BASEITEMGUID = 'D9D58035-7E99-4132-8150-1496662D8B1E'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AC_3619_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A3619 E-3'
+                BASEITEMGUID = 'AC05F294-08D4-44FA-9132-DCC6FECA62CC'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AC_3719_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A3719S E-3'
+                BASEITEMGUID = 'D3A32B45-531E-4F31-A91B-BFB97C29D6D0'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AC_2919_E3:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A2919 E-3'
+                BASEITEMGUID = '94844744-24C1-4465-ADB7-8F017ACCD9DD'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
 
