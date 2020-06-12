@@ -188,6 +188,26 @@ HOEG_8531Q = ['8531Q']
 HOEG_8636AM = ['8636 AM', '8636AM']
 HOEG_8637Q = ['8637Q']
 HOEG_8749AM = ['8749 AM']
+DKC_51_91SS = ['5191', '5191 SS']
+DKC_53_27SS = ['5327', '5327 SS']
+DKC_54_64SS = ['5464', '5464 SS']
+DKC_55_65SS = ['56-65 SS', '5565', '55-65 SS', 'DKC 55-65 SS', 'DKC 55-65 SS']
+DKC_59_81SS = ['5981', '59-81 SS', 'DKC59-81RIB', '5981 SS']
+DKC_59_82VT2P = ['59-82']
+DKC_60_88VT2PRIB = ['DKC60-88RIB']
+DKC_61_40SS = ['6140', '61-40', '61-40 SS',
+               'DKC61-40', 'DKC61-40RIB', '6140 SS']
+DKC_63_60SS = ['DKC63-60']
+DKC_63_91VT2PRIB = ['63-91']
+DKC_63_90SS = ['6930', '63-90', 'DKC63-90',
+               'DKC63-90RIB', '6390 SS', 'DKC 63-90', 'DKC 63-90RIB', '6390-SS']
+DKC_64_34SS = ['DKC64-34']
+DKC_64_35VT2P = ['64-35']
+DKC_66_17SS = ['66-17', '66-17SS', 'DKC66-17']
+DKC_66_74SS = ['66-74SS', 'DKC66-74', '66-74 SS']
+DKC_70_26SSRIB = ['DKC70-26RIB', 'DKC 70-26', 'DKC 70-26RIB']
+DKC_70_27VT2P = ['70-27']
+DKC_70_27VT2PRIB = ['DK70-27 RIB']
 
 
 def topPlantingInfo():
@@ -1174,6 +1194,114 @@ def bottomPlantingInfo():
         for product in HOEG_8749AM:
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'Hoeg 8749AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_51_91SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 51-91 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_53_27SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 53-27 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_54_64SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 54-64 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_59_81SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 59-81 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_61_40SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 61-40 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_59_82VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 59-82 VT2P'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_63_91VT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKB 63-91 VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_64_35VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 64-35 VT2P'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_66_17SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 66-17 SS'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_70_27VT2P:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 70-27 VT2P'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_70_27VT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 70-27 VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_60_88VT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 60-88 VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_63_60SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 63-60 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_64_34SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 64-34 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_66_74SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 66-74 SS'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_70_26SSRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 70-26 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_63_90SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 63-90 SS'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in DKC_55_65SS:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'DKC 55-65 SS'
                 BASEITEMGUID = '14'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
