@@ -166,6 +166,28 @@ AC_3219_E3 = ['A3219E3']
 AC_3619_E3 = ['A3619E3', '3619-E3']
 AC_3719_E3 = ['A3719E3']
 AC_2919_E3 = ['2919-E3', 'A2919E3']
+HOEG_7404Q = ['7404Q']
+HOEG_7436Q = ['7436Q']
+HOEG_7692Q = ['7692Q']
+HOEG_7990Q = ['7990Q']
+HOEG_8028AM = ['8028 AM']
+HOEG_8073Q = ['8073Q']
+HOEG_8085Q = ['8085Q']
+HOEG_8106Q = ['8106Q']
+HOEG_8188Q = ['8188Q']
+HOEG_8233AM = ['8233 AM']
+HOEG_8235Q = ['8235Q']
+HOEG_8268Q = ['8268Q']
+HOEG_8364AMXT = ['8364AMXT']
+HOEG_8417Q = ['8417Q']
+HOEG_8491Q = ['8491Q']
+HOEG_8511AML = ['8511 AML']
+HOEG_8512Q = ['8512Q']
+HOEG_8519Q = ['8519Q']
+HOEG_8531Q = ['8531Q']
+HOEG_8636AM = ['8636 AM', '8636AM']
+HOEG_8637Q = ['8637Q']
+HOEG_8749AM = ['8749 AM']
 
 
 def topPlantingInfo():
@@ -254,6 +276,11 @@ def bottomPlantingInfo():
     for row in range(17, plantingSheet.max_row + 1):
         ENTRY = plantingSheet['A' + str(row)].value
         COMPANY = plantingSheet['C' + str(row)].value
+        if COMPANY == 'LG':
+            COMPANY = 'LG Seeds'
+        else:
+            COMPANY = COMPANY
+
         BASEITEMGUID = ''
         HYBRID_VARIETY = plantingSheet['F' + str(row)].value
         for product in PV_113_V89:
@@ -1016,6 +1043,138 @@ def bottomPlantingInfo():
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'A2919 E-3'
                 BASEITEMGUID = '94844744-24C1-4465-ADB7-8F017ACCD9DD'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_7404Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 7404Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_7436Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 7436Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_7692Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 7692Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_7990Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 7990Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8028AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8028AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8073Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8073Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8085Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8085Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8106Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8106Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8188Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8188Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8233AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8233AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8235Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8235Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8268Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8268Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8364AMXT:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8364AMXT'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8417Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8417Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8491Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8419Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8511AML:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8511AML'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8512Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8512Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8519Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8519Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8531Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8531Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8636AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8636AM'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8637Q:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8637Q'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in HOEG_8749AM:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'Hoeg 8749AM'
+                BASEITEMGUID = '14'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
 
