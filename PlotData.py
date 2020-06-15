@@ -236,6 +236,15 @@ CHAN_215_75VT2PRIB = ['215-75', '215-75VT2', '215-75VT2P', '215-75VT2RIB']
 CHAN_216_36_CONV = ['216-36']
 CHAN_217_76VT2PRIB = ['217-76 VT2']
 CHAN_217_76STX = ['217-76STX']
+AGRI_644_32_TRIRIB = ['44-32 TRI', '644-32TRICRIB']
+AGRI_645_16_STX = ['645-16 STX']
+AGRI_6652_VT2PRIB = ['6652 VT2', '6652VT2RIB']
+AGRI_639_70STXRIB = ['A639-70STSRIB']
+AGRI_6499_STXRIB = ['A6499STXRIB']
+AGRI_647_90_STXRIB = ['647-90 STX']
+AGRI_6652_STX = ['6652 STX']
+AV_3917YHB = ['3917']
+AV_4509AML = ['4509']
 
 
 def topPlantingInfo():
@@ -1502,6 +1511,60 @@ def bottomPlantingInfo():
         for product in CHAN_214_22:
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'CHAN 214_22'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AGRI_644_32_TRIRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A644-32 TRICRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AGRI_645_16_STX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A645-16 STX'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AGRI_6652_VT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A6652 VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AGRI_639_70STXRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A639-70 STXRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AGRI_6499_STXRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A6499 STXRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AGRI_647_90_STXRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A647-90 STXRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AGRI_6652_STX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'A6652 STXRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AV_3917YHB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'AV3917YHB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in AV_4509AML:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'AV4509AML'
                 BASEITEMGUID = '14'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
