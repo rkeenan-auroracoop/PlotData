@@ -266,6 +266,20 @@ HE_6024 = [6024, 'H6024SSRIB']
 HE_6332 = [6332]
 HE_6524 = ['H6524SSRIB']
 HE_6532 = [6532]
+IC_6038_3330A = ['IC60 38-3330A', 'IC6038-3330 Brand']
+IC_6312_3220 = ['IC6312-3220']
+IC_6580_3330 = ['IC6580-3330']
+IC_6829-3111 = ['IC6829-3111']
+JS_9513_SS = [9616]
+LE_9016_GENSSRIB = [9016, '9016 IONRx']
+NCP_04_99_VT2RIB = ['04-99VT2RIB']
+NCP_07_27_VT2RIB = ['07-27VT2RIB']
+NCP_11_15_VT2RIB = ['11-15 VT2RIB', '11-15:', 'NC+ 11-15']
+NCP_14_64_VT2RIB = ['14-64 VT2RIB']
+NCP_15_65_VT2RIB = ['15-65 VT2RIB', 'NC+15-65', 'NC+15-65']
+NCP_12_48_DGVT2PRO = ['NC+ 14-48']
+NCP_14_88_VT2PRIB = ['NC+14-88']
+RSC_6148_3010A = ['RC6148-3010A']
 
 
 def topPlantingInfo():
@@ -1709,7 +1723,72 @@ def bottomPlantingInfo():
                 BASEITEMGUID = '14'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
-
+        for product in IC_6038_3330A:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'IC6038-3330A'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in IC_6312_3220:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'IC6312-3220'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in IC_6580_3330:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'IC6580-3330'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in IC_6829_3111:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'IC6829-3111'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in LE_9016_GENSSRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'LR 9016 GENSSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NCP_04_99_VT2RIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NC 04-99 VT2RIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NCP_07_27_VT2RIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NC 07-27 VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NCP_11_15_VT2RIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NC 11-15 VT2RIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NCP_14_64_VT2RIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NC 14-64 VT2RIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NCP_12_48_DGVT2PRO:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NC+ 12-48'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in NCP_14_88_VT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'NC 14-88VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
         SEED_TREATMENTS = plantingSheet['J' + str(row)].value
         if SEED_TREATMENTS != None:
             SEED_TREATMENTS = SEED_TREATMENTS
