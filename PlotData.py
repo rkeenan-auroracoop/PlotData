@@ -225,6 +225,17 @@ F_09A219 = ['09A219']
 F_09A249 = ['09A249']
 F_11A637 = ['11A637']
 F_17A819 = ['17A819']
+CHAN_209_15BT2PRIB = ['209-15VT2']
+CHAN_213_19STXRIB = ['213-19 STX', '213-19STX']
+CHAN_213_19VT2 = ['213-19VT2']
+CHAN_213_93STX = ['213-93', '213-93STX', '213-95STXRIB']
+CHAN_214_22 = ['214-22']
+CHAN_214_78 = ['214-78', '214-78DGVT2', '214-78 VT2', '214-78VT2']
+CHAN_215_60TRERIB = ['214-60 TRI']
+CHAN_215_75VT2PRIB = ['215-75', '215-75VT2', '215-75VT2P', '215-75VT2RIB']
+CHAN_216_36_CONV = ['216-36']
+CHAN_217_76VT2PRIB = ['217-76 VT2']
+CHAN_217_76STX = ['217-76STX']
 
 
 def topPlantingInfo():
@@ -1425,6 +1436,72 @@ def bottomPlantingInfo():
         for product in F_14A648:
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'F 14A648 CONV'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_209_15BT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 209-15VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_213_19STXRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 213_19STXRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_213_19VT2:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 213_19VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_213_93STX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 213-93STXRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_214_78:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 214-78DGVT2'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_215_60TRERIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 215-60TRERIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_215_75VT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 215-75VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_216_36_CONV:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 216-36CONV'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_217_76VT2PRIB:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 217-76VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_217_76STX:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 217_76STX'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in CHAN_214_22:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'CHAN 214_22'
                 BASEITEMGUID = '14'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
