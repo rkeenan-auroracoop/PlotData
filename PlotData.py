@@ -208,6 +208,23 @@ DKC_66_74SS = ['66-74SS', 'DKC66-74', '66-74 SS']
 DKC_70_26SSRIB = ['DKC70-26RIB', 'DKC 70-26', 'DKC 70-26RIB']
 DKC_70_27VT2P = ['70-27']
 DKC_70_27VT2PRIB = ['DK70-27 RIB']
+F_90D623 = ['09D623']
+F_09G219 = ['09G219']
+F_10D308 = ['10D308']
+F_11A637 = ['11A637']
+F_12A558 = ['12A558']
+F_13A843 = ['13A843']
+F_13G519 = ['13G519']
+F_14D796 = ['14D796']
+F_14G658 = ['14G658']
+F_15A410 = ['15A410']
+F_15A657 = ['15A657']
+F_14A648 = ['14A648']
+F_16A826 = ['16A826']
+F_09A219 = ['09A219']
+F_09A249 = ['09A249']
+F_11A637 = ['11A637']
+F_17A819 = ['17A819']
 
 
 def topPlantingInfo():
@@ -1306,6 +1323,108 @@ def bottomPlantingInfo():
         for product in DKC_55_65SS:
             if HYBRID_VARIETY == product:
                 HYBRID_VARIETY = 'DKC 55-65 SS'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_90D623:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 09D623 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_09G219:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 09G219 DGVT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_10D308:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 10D308 VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_11A637:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 11A637 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_12A558:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 12A558 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_13A843:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 13A843 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_13G519:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 13G519 DGVT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_14D796:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 14D769 VT2PRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_14G658:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 14G658'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_15A410:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 15A410 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_15A657:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 15A657 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_16A826:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 16A826 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_09A219:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 09A219 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_09A249:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 09A249 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_11A637:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 11A637 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_17A819:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 17A819 SSRIB'
+                BASEITEMGUID = '14'
+            else:
+                HYBRID_VARIETY = HYBRID_VARIETY
+        for product in F_14A648:
+            if HYBRID_VARIETY == product:
+                HYBRID_VARIETY = 'F 14A648 CONV'
                 BASEITEMGUID = '14'
             else:
                 HYBRID_VARIETY = HYBRID_VARIETY
