@@ -1904,6 +1904,7 @@ def bottomPlantingInfo():
         else:
             SEED_TREATMENTS = "None"
         NUM_OF_ROWS = plantingSheet['M' + str(row)].value
+        FORM_TYPE = "Planting Form"
 
         if COMPANY != None and HYBRID_VARIETY != None:
             topPlantingInfo()
@@ -1913,6 +1914,10 @@ def bottomPlantingInfo():
         else:
             continue
 
+
+with open(r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(PLANTING).txt', 'a') as f1:
+    f1.write('Name' + '\t' + 'Grower_City' + '\t' + 'Grower_State' + '\t' + 'County' + '\t' + 'ACE_Location' + '\t' + 'Started_Plot_On' + '\t' + 'Flag_Location' + '\t' + 'GPS_Latitude' + '\t' + 'Fungicide' + '\t' + 'Crop' + '\t' + 'Planting_Date' + '\t' + 'Seeding_Rate' + '\t' + 'Planting_Depth_(in)' + '\t' + 'Planter_Type' + '\t' + 'Row_Width' +
+             '\t' + 'GPS_Longitude' + '\t' + 'Herbicide' + '\t' + 'Plot_Type' + '\t' + 'Irrigation_Type' + '\t' + 'Previous_Crop' + '\t' + 'Tillage_System' + '\t' + 'Soil_Texture' + '\t' + 'Insecticide/Rate' + '\t' + 'Form_Type' + '\t' + 'Entry#' + '\t' + 'Company' + '\t' + 'Hybrid_Variety' + '\t' + 'ItemGuid' + '\t' + 'Seed_Treatments' + '\t' + 'Num_of_Rows' + '\n')
 
 for folders, sub_folders, file in os.walk(docDir):
     for name in file:
