@@ -399,7 +399,7 @@ def topPlantingInfo():
         INSECTICIDE_RATE = "None"
     FORM_TYPE = "PLANTING FORM"
 
-    f1.write(GROWER_NAME.title() + "\t" + GROWER_CITY.strip() + '\t' + GROWER_STATE + "\t" + COUNTY.title() + "\t" + ACE_LOCATION.title() + "\t" + STARTED_PLOT_ON.title() + "\t" + FLAG_LOCATION.title() + "\t" + str(GPS_LATITUDE) + "\t" + FUNGICIDE.title() + "\t" + CROP.title() + "\t" + str(PLANTING_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
+    f1.write(GROWER_NAME.title() + "\t" + GROWER_CITY.strip() + '\t' + GROWER_STATE + "\t" + COUNTY.title() + "\t" + ACE_LOCATION + "\t" + STARTED_PLOT_ON.title() + "\t" + FLAG_LOCATION.title() + "\t" + str(GPS_LATITUDE) + "\t" + FUNGICIDE.title() + "\t" + CROP.title() + "\t" + str(PLANTING_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
              str(PLANTING_DEPTH_IN) + "\t" + PLANTER_TYPE.title() + "\t" + str(ROW_WIDTH) + "\t" + str(GPS_LONGITUDE) + "\t" + HERBICIDE.title() + "\t" + PLOT_TYPE.title() + "\t" + IRRIGATION_TYPE.title() + "\t" + PREVIOUS_CROP.title() + "\t" + TILLAGE_SYSTEM.title() + "\t" + SOIL_TEXTURE.title() + "\t" + INSECTICIDE_RATE + "\t" + FORM_TYPE.title() + "\t")
 
 
