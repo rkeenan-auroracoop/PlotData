@@ -5,6 +5,7 @@ from openpyxl import load_workbook
 
 # This is for the PLANTING FORM
 
+
 docDir = r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry'
 
 plantingWriteFile = (
@@ -293,10 +294,29 @@ NCP_12_48_DGVT2PRO = ['NC+ 12-48']
 NCP_14_88_VT2PRIB = ['NC+14-88']
 RSC_6148_3010A = ['RC6148-3010A']
 
+# These are state variables for GROWER_STATE
+CO = ['Yuma', 'Wray']
+KS = ['Clyde', 'Mahaska']
+IA = ['Ames']
+NE = ['Wood River', 'Doniphan', 'McCool Junction', 'Kearney',
+      'Superior', 'Deshler', 'Grand Island', 'Roseland', 'Palmer', 'Alda', 'Ong', "Henderson", 'Hampton', 'Marquette', 'Diller', 'Byron', 'Bertrand', 'Ravenna', 'Franklin', 'Minden', 'Saronville', 'Gibbon', 'Harvard', 'Bellwood', 'Hubbell', 'Boelus', 'Geneva', 'Central City', 'David City', 'Edgar', 'Arcadia', 'Elm Creek', 'Kenesaw', 'Lexington', 'Fairbury', 'Byron']
+
 
 def topPlantingInfo():
     GROWER_NAME = plantingSheet['C3'].value
     GROWER_CITY = plantingSheet['C4'].value
+    GROWER_STATE = ''
+    if GROWER_CITY in CO:
+        GROWER_STATE = 'CO'
+    elif GROWER_CITY in KS:
+        GROWER_STATE = 'KS'
+    elif GROWER_CITY in IA:
+        GROWER_STATE = 'IA'
+    elif GROWER_CITY in NE:
+        GROWER_STATE = 'NE'
+    else:
+        GROWER_STATE = ''
+        print("Error: City not listed.")
     COUNTY = plantingSheet['C5'].value
     ACE_LOCATION = plantingSheet['C6'].value
     if ACE_LOCATION != None:
@@ -379,7 +399,7 @@ def topPlantingInfo():
         INSECTICIDE_RATE = "None"
     FORM_TYPE = "PLANTING FORM"
 
-    f1.write(GROWER_NAME.title() + "\t" + GROWER_CITY.title() + "\t" + COUNTY.title() + "\t" + ACE_LOCATION.title() + "\t" + STARTED_PLOT_ON.title() + "\t" + FLAG_LOCATION.title() + "\t" + str(GPS_LATITUDE) + "\t" + FUNGICIDE.title() + "\t" + CROP.title() + "\t" + str(PLANTING_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
+    f1.write(GROWER_NAME.title() + "\t" + GROWER_CITY.strip() + '\t' + GROWER_STATE + "\t" + COUNTY.title() + "\t" + ACE_LOCATION.title() + "\t" + STARTED_PLOT_ON.title() + "\t" + FLAG_LOCATION.title() + "\t" + str(GPS_LATITUDE) + "\t" + FUNGICIDE.title() + "\t" + CROP.title() + "\t" + str(PLANTING_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
              str(PLANTING_DEPTH_IN) + "\t" + PLANTER_TYPE.title() + "\t" + str(ROW_WIDTH) + "\t" + str(GPS_LONGITUDE) + "\t" + HERBICIDE.title() + "\t" + PLOT_TYPE.title() + "\t" + IRRIGATION_TYPE.title() + "\t" + PREVIOUS_CROP.title() + "\t" + TILLAGE_SYSTEM.title() + "\t" + SOIL_TEXTURE.title() + "\t" + INSECTICIDE_RATE + "\t" + FORM_TYPE.title() + "\t")
 
 
