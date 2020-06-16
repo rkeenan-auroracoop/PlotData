@@ -338,6 +338,10 @@ def topPlantingInfo():
     else:
         SOIL_TEXTURE = "None"
     GPS_LONGITUDE = plantingSheet['H9'].value
+    if '-' in str(GPS_LONGITUDE):
+        GPS_LONGITUDE = GPS_LONGITUDE
+    else:
+        GPS_LONGITUDE = "-" + str(GPS_LONGITUDE)
     HERBICIDE = plantingSheet['H10'].value
     if HERBICIDE != None:
         HERBICIDE = HERBICIDE
