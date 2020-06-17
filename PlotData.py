@@ -2053,13 +2053,17 @@ def bottomPlantingInfo():
         else:
             SEED_TREATMENTS = "None"
         NUM_OF_ROWS = plantingSheet['M' + str(row)].value
-        FORM_TYPE = "Planting Form"
 
         if COMPANY != None and HYBRID_VARIETY != None:
             topPlantingInfo()
-            f1.write(str(ENTRY) + "\t" + COMPANY.title() + "\t" + str(HYBRID_VARIETY) +
-                     "\t" + str(BASEITEMGUID).upper() +
-                     "\t" + str(SEED_TREATMENTS) + "\t" + str(NUM_OF_ROWS) + "\n")
+            if len(COMPANY) <= 3 or COMPANY == 'LG Seeds':
+                f1.write(str(ENTRY) + "\t" + COMPANY + "\t" + str(HYBRID_VARIETY) +
+                         "\t" + str(BASEITEMGUID).upper() +
+                         "\t" + str(SEED_TREATMENTS) + "\t" + str(NUM_OF_ROWS) + "\n")
+            else:
+                f1.write(str(ENTRY) + "\t" + COMPANY.title() + "\t" + str(HYBRID_VARIETY) +
+                         "\t" + str(BASEITEMGUID).upper() +
+                         "\t" + str(SEED_TREATMENTS) + "\t" + str(NUM_OF_ROWS) + "\n")
         else:
             continue
 
