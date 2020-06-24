@@ -450,6 +450,10 @@ IA = []
 NE = ['Wood River', 'Doniphan', 'McCool Junction', 'Kearney',
       'Superior', 'Deshler', 'Grand Island', 'Roseland', 'Palmer', 'Alda', 'Ong', "Henderson", 'Hampton', 'Marquette', 'Diller', 'Byron', 'Bertrand', 'Ravenna', 'Franklin', 'Minden', 'Saronville', 'Gibbon', 'Harvard', 'Bellwood', 'Hubbell', 'Boelus', 'Geneva', 'Central City', 'David City', 'Edgar', 'Arcadia', 'Elm Creek', 'Kenesaw', 'Lexington', 'Fairbury', 'Byron']
 
+with open(
+    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(PLANTING).txt', 'w') as f1:
+    f1.write("GrowerName")
+    
 
 def topPlantingInfo():
     GROWER_NAME = plantingSheet['C3'].value
@@ -2072,18 +2076,18 @@ with open(r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tablea
     f1.write('Name' + '\t' + 'Grower_City' + '\t' + 'Grower_State' + '\t' + 'County' + '\t' + 'ACE_Location' + '\t' + 'Started_Plot_On' + '\t' + 'Flag_Location' + '\t' + 'GPS_Latitude' + '\t' + 'Fungicide' + '\t' + 'Crop' + '\t' + 'Planting_Date' + '\t' + 'Seeding_Rate' + '\t' + 'Planting_Depth_(in)' + '\t' + 'Planter_Type' + '\t' + 'Row_Width' +
              '\t' + 'GPS_Longitude' + '\t' + 'Herbicide' + '\t' + 'Plot_Type' + '\t' + 'Irrigation_Type' + '\t' + 'Previous_Crop' + '\t' + 'Tillage_System' + '\t' + 'Soil_Texture' + '\t' + 'Insecticide/Rate' + '\t' + 'Form_Type' + '\t' + 'Entry#' + '\t' + 'Company' + '\t' + 'Hybrid_Variety' + '\t' + 'Item_GUID' + '\t' + 'Seed_Treatments' + '\t' + 'Num_of_Rows' + '\n')
 
-for folders, sub_folders, file in os.walk(docDir):
-    for name in file:
-        if name.endswith(".xlsx"):
-            filename = os.path.join(folders, name)
-            print(filename)
-            wb = load_workbook(filename)
-            plantingSheet = wb['PLANTING FORM']
-            with open(r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(PLANTING).txt', 'a') as f1:
-                bottomPlantingInfo()
-                wb.close()
-        else:
-            continue
+#for folders, sub_folders, file in os.walk(docDir):
+#    for name in file:
+#        if name.endswith(".xlsx"):
+#            filename = os.path.join(folders, name)
+#            print(filename)
+#            wb = load_workbook(filename)
+#            plantingSheet = wb['PLANTING FORM']
+#            with open(r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(PLANTING).txt', 'a') as f1:
+#                bottomPlantingInfo()
+#                wb.close()
+#        else:
+#            continue
 
 print("Your Planting Form data plot file is done!")
 
@@ -2193,20 +2197,32 @@ def bottomNotesInfo():
 
 # This is for the HARVEST FORM
 
-harvestSheet = wb['HARVEST FORM']
-harvestWriteFile = open(
-    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(HARVEST).txt', 'w')
+
+
 
 with open(
-    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(HARVEST).txt', 'w'):
+    r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(HARVEST).txt', 'w') as f2:
+    f2.write('GrowerName' + "\t" + 'GrowerCity' + "\t" + 'GrowerState' + "\t" + 'GrowerCounty' + "\t" + 'ACELocation'  + "\t" + 'PlotStartedOn' + "\t" + 'FlagLocation' + "\t" + 'Latitude'  + "\t" + 'Longitude' + "\t" + 'Fungicide' + "\t" + 'Crop' + "\t" + 'Planting Date' + "\t" + 'Harvest Date' + "\t" + 'SeedingRate' + "\t" + 'PlantingDepthInches' + "\t" + 'PlanterType' + "\t" + 'Row Width' + "\t" + 'Herbicide' + "\t" + 'Commodity Price' + "\t" + 'PlotType' + "\t" + 'IrrigationType' + "\t" + 'PreviousCrop' + "\t" + 'TillageSystem'  + "\t" + 'SoilTexture' + "\t" + 'InsecticideRate' + "\t" + 'FormType' + "\t" + 'EntryNumber' + "\t" + 'SeedCompany' + "\t" + 'HybridVariety' + "\t" + 'Item_GUID' + "\t" + 'SeedTreatments' + "\t" + 'NumOfRows' + '\n' )
 
 def topHarvestInfo():
     GROWER_NAME = harvestSheet['C3'].value
     GROWER_CITY = harvestSheet['C4'].value
+    GROWER_STATE = ''
+    if GROWER_CITY in CO:
+        GROWER_STATE = 'CO'
+    elif GROWER_CITY in KS:
+        GROWER_STATE = 'KS'
+    elif GROWER_CITY in IA:
+        GROWER_STATE = 'IA'
+    elif GROWER_CITY in NE:
+        GROWER_STATE = 'NE'
+    else:
+        GROWER_STATE = ''
+        print("Error: City not listed.")
     COUNTY = harvestSheet['C5'].value
     ACE_LOCATION = harvestSheet['C6'].value
-    STATED_PLOT_ON = harvestSheet['C7'].value
-    FLAT_LOCATION = harvestSheet['C8'].value
+    STARTED_PLOT_ON = harvestSheet['C7'].value
+    FLAG_LOCATION = harvestSheet['C8'].value
     GPS_LATITUDE = harvestSheet['C9'].value
     FUNGICIDE = harvestSheet['C10'].value
     if FUNGICIDE != None:
@@ -2225,6 +2241,10 @@ def topHarvestInfo():
     PLANTER_TYPE = harvestSheet['H7'].value
     ROW_WIDTH = harvestSheet['H8'].value
     GPS_LONGITUDE = harvestSheet['H9'].value
+    if '-' in str(GPS_LONGITUDE):
+        GPS_LONGITUDE = GPS_LONGITUDE
+    else:
+        GPS_LONGITUDE = "-" + str(GPS_LONGITUDE)
     HERBICIDE = harvestSheet['H10'].value
     if HERBICIDE != None:
         HERBICIDE = HERBICIDE
@@ -2244,14 +2264,14 @@ def topHarvestInfo():
     DRYING_COST = harvestSheet['L11'].value
     FORM_TYPE = "HARVEST FORM"
 
-    harvestWriteFile.write(GROWER_NAME + "\t" + GROWER_CITY + "\t" + COUNTY + "\t" + ACE_LOCATION + "\t" + STATED_PLOT_ON + "\t" + FLAT_LOCATION + "\t" + str(GPS_LATITUDE) + "\t" + FUNGICIDE + "\t" + HARVEST_DATE + "\t" + CROP + "\t" + str(PLANTING_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
-                           str(PLANTING_DEPTH_IN) + "\t" + PLANTER_TYPE + "\t" + str(ROW_WIDTH) + "\t" + str(GPS_LONGITUDE) + "\t" + HERBICIDE + "\t" + str(COMMODITY_PRICE) + "\t" + PLOT_TYPE + "\t" + IRRIGATION_TYPE + "\t" + PREVIOUS_CROP + "\t" + TILLAGE_SYSTEM + "\t" + SOIL_TEXTURE + "\t" + INSECTICIDE_RATE + "\t" + str(DRYING_COST) + "\t" + FORM_TYPE + "\t")
+    f2.write(GROWER_NAME + "\t" + GROWER_CITY + "\t" + GROWER_STATE + "\t" +  COUNTY + "\t" + ACE_LOCATION + "\t" + str(STARTED_PLOT_ON) + "\t" + str(FLAG_LOCATION) + "\t" + str(GPS_LATITUDE) + '\t' + str(GPS_LONGITUDE) + "\t" + str(FUNGICIDE) + "\t" + str(CROP) + "\t" + str(PLANTING_DATE) + '\t' + str(HARVEST_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
+                           str(PLANTING_DEPTH_IN) + "\t" + str(PLANTER_TYPE) + "\t" + str(ROW_WIDTH) + "\t" + str(HERBICIDE) + "\t" + str(COMMODITY_PRICE) + "\t" + str(PLOT_TYPE) + "\t" + str(IRRIGATION_TYPE) + "\t" + str(PREVIOUS_CROP) + "\t" + str(TILLAGE_SYSTEM) + "\t" + str(SOIL_TEXTURE) + "\t" + str(INSECTICIDE_RATE) + "\t" + str(DRYING_COST) + "\t" + FORM_TYPE + "\t")
 
 
 def bottomHarvestInfo():
     for row in range(17, harvestSheet.max_row + 1):
         BRAND = harvestSheet['A' + str(row)].value
-        PRODUCT = harvestSheet['C' + str(row)].value
+        HYBRID_VARIETY = harvestSheet['C' + str(row)].value
         ROW_LENGTH = harvestSheet['F' + str(row)].value
         if ROW_LENGTH != None:
             ROW_LENGTH = ROW_LENGTH
@@ -2293,14 +2313,27 @@ def bottomHarvestInfo():
             DOLLARS_PER_ACRE_RANK = DOLLARS_PER_ACRE_RANK
         else:
             DOLLARS_PER_ACRE_RANK = "None"
-        if BRAND != None and PRODUCT != None:
+        if BRAND != None and HYBRID_VARIETY != 0:
             topHarvestInfo()
-            harvestWriteFile.write(BRAND + "\t" + str(PRODUCT) + "\t" + str(ROW_LENGTH) +
+            f2.write(str(BRAND) + "\t" + str(HYBRID_VARIETY) + "\t" + str(ROW_LENGTH) +
                                    "\t" + str(WET_WEIGHT) + "\t" + str(HARVEST_MOISTURE_PCT) + "\t" + str(NUM_OF_ROWS) + "\t" + str(TEST_WEIGHT) + "\t" + str(YIELD_PER_ACRE) + "\t" + str(PCT_OF_PLOT_ADVANTAGE) + "\t" + str(YIELD_PER_ACRE_RANK) + "\t" + str(DOLLARS_PER_ACRE_RANK) + "\n")
+        else:
+            break
+
+for folders, sub_folders, file in os.walk(docDir):
+    for name in file:
+        if name.endswith(".xlsx"):
+            filename = os.path.join(folders, name)
+            print(filename)
+            wb = load_workbook(filename, data_only=True)
+            harvestSheet = wb['HARVEST FORM']
+            with open(r'C:\Users\rkeenan\OneDrive - Aurora Cooperative\Documents\2020 Tableau Updates\Al Perry\Test Plot(HARVEST).txt', 'a') as f2:
+                bottomHarvestInfo()
+                wb.close()
         else:
             continue
 
-    print("Your Harvest Form data plot file is done!")
 
-bottomHarvestInfo()
-harvestWriteFile.close()
+print("Your Harvest Form data plot file is done!")
+
+
