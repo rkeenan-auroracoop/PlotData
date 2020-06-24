@@ -2264,14 +2264,20 @@ def topHarvestInfo():
     DRYING_COST = harvestSheet['L11'].value
     FORM_TYPE = "HARVEST FORM"
 
-    f2.write(GROWER_NAME + "\t" + GROWER_CITY + "\t" + GROWER_STATE + "\t" +  COUNTY + "\t" + ACE_LOCATION + "\t" + str(STARTED_PLOT_ON) + "\t" + str(FLAG_LOCATION) + "\t" + str(GPS_LATITUDE) + '\t' + str(GPS_LONGITUDE) + "\t" + str(FUNGICIDE) + "\t" + str(CROP) + "\t" + str(PLANTING_DATE) + '\t' + str(HARVEST_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
-                           str(PLANTING_DEPTH_IN) + "\t" + str(PLANTER_TYPE) + "\t" + str(ROW_WIDTH) + "\t" + str(HERBICIDE) + "\t" + str(COMMODITY_PRICE) + "\t" + str(PLOT_TYPE) + "\t" + str(IRRIGATION_TYPE) + "\t" + str(PREVIOUS_CROP) + "\t" + str(TILLAGE_SYSTEM) + "\t" + str(SOIL_TEXTURE) + "\t" + str(INSECTICIDE_RATE) + "\t" + str(DRYING_COST) + "\t" + FORM_TYPE + "\t")
+    f2.write(GROWER_NAME.title() + "\t" + GROWER_CITY.title() + "\t" + GROWER_STATE.title() + "\t" +  COUNTY.title() + "\t" + ACE_LOCATION + "\t" + str(STARTED_PLOT_ON).title() + "\t" + str(FLAG_LOCATION).title() + "\t" + str(GPS_LATITUDE) + '\t' + str(GPS_LONGITUDE) + "\t" + str(FUNGICIDE).title() + "\t" + str(CROP).title() + "\t" + str(PLANTING_DATE) + '\t' + str(HARVEST_DATE) + "\t" + str(SEEDING_RATE) + "\t" +
+                           str(PLANTING_DEPTH_IN) + "\t" + str(PLANTER_TYPE).title() + "\t" + str(ROW_WIDTH) + "\t" + str(HERBICIDE).title() + "\t" + str(COMMODITY_PRICE) + "\t" + str(PLOT_TYPE).title() + "\t" + str(IRRIGATION_TYPE).title() + "\t" + str(PREVIOUS_CROP).title() + "\t" + str(TILLAGE_SYSTEM).title() + "\t" + str(SOIL_TEXTURE).title() + "\t" + str(INSECTICIDE_RATE).title() + "\t" + str(DRYING_COST) + "\t" + FORM_TYPE.title() + "\t")
 
 
 def bottomHarvestInfo():
     for row in range(17, harvestSheet.max_row + 1):
-        BRAND = harvestSheet['A' + str(row)].value
+        COMPANY = harvestSheet['A' + str(row)].value
+        if COMPANY == 'LG':
+            COMPANY = 'LG Seeds'
+        else:
+            COMPANY = COMPANY
+
         HYBRID_VARIETY = harvestSheet['C' + str(row)].value
+        BASEITEMGUID = ''
         ROW_LENGTH = harvestSheet['F' + str(row)].value
         if ROW_LENGTH != None:
             ROW_LENGTH = ROW_LENGTH
@@ -2313,9 +2319,13 @@ def bottomHarvestInfo():
             DOLLARS_PER_ACRE_RANK = DOLLARS_PER_ACRE_RANK
         else:
             DOLLARS_PER_ACRE_RANK = "None"
-        if BRAND != None and HYBRID_VARIETY != 0:
+        if ROW_LENGTH != 0 and NUM_OF_ROWS != 0:
             topHarvestInfo()
-            f2.write(str(BRAND) + "\t" + str(HYBRID_VARIETY) + "\t" + str(ROW_LENGTH) +
+            if len(str(COMPANY)) <= 3 or COMPANY == 'LG Seeds':
+                f2.write(str(COMPANY) + "\t" + str(HYBRID_VARIETY) + '\t' + BASEITEMGUID + "\t" + str(ROW_LENGTH) +
+                                   "\t" + str(WET_WEIGHT) + "\t" + str(HARVEST_MOISTURE_PCT) + "\t" + str(NUM_OF_ROWS) + "\t" + str(TEST_WEIGHT) + "\t" + str(YIELD_PER_ACRE) + "\t" + str(PCT_OF_PLOT_ADVANTAGE) + "\t" + str(YIELD_PER_ACRE_RANK) + "\t" + str(DOLLARS_PER_ACRE_RANK) + "\n")
+            else:
+                f2.write(str(COMPANY).title() + "\t" + str(HYBRID_VARIETY) + '\t' + BASEITEMGUID + "\t" + str(ROW_LENGTH) +
                                    "\t" + str(WET_WEIGHT) + "\t" + str(HARVEST_MOISTURE_PCT) + "\t" + str(NUM_OF_ROWS) + "\t" + str(TEST_WEIGHT) + "\t" + str(YIELD_PER_ACRE) + "\t" + str(PCT_OF_PLOT_ADVANTAGE) + "\t" + str(YIELD_PER_ACRE_RANK) + "\t" + str(DOLLARS_PER_ACRE_RANK) + "\n")
         else:
             break
